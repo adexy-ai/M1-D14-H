@@ -73,5 +73,16 @@ function longestOfTwoArrays(a, b) {
 console.log(longestOfTwoArrays(a, b));
 //30) Create a function that gets 2 arrays of numbers as parameters and returns the one with the higher sum of values -->
 function highestSum(a, b) {
-    
+    let sum = a.reduce(function (previousValue, currentValue) {
+        return previousValue + currentValue;
+    });
+    let sum2 = b.reduce(function (previousValue, currentValue) {
+        return previousValue + currentValue;
+    });
+    if (sum > sum2) {
+        return a
+        
+    } else return b
 }
+
+console.log("the array with the higest", highestSum(a, b))
